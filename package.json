@@ -1,0 +1,25 @@
+{
+  "name": "www.elf-ev.de-placeholder",
+  "description": "Placeholder website for Erstes Lesumer Fernsehen e.V.",
+  "version": "1.0.0-beta",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michel-zimmer/www.elf-ev.de-placeholder.git"
+  },
+  "author": {
+    "name": "Michel Zimmer",
+    "email": "mzimmer@uni-bremen.de",
+    "url": "https://www.mzimmer.net/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michel-zimmer/www.elf-ev.de-placeholder/issues"
+  }
+}
