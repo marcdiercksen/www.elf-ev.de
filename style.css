@@ -57,10 +57,13 @@ body {
 
 .mdl-card__supporting-text {
   box-sizing: border-box;
-  text-align: justify;
   width: 100%;
 }
 
 .mdl-card__supporting-text > table {
   width: 100%;
+}
+
+.mdl-card__supporting-text.running-text {
+  text-align: justify;
 }
