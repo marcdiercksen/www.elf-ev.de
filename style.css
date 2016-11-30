@@ -45,3 +45,22 @@ body {
     font-size: 14px;
   }
 }
+
+.mdl-layout__drawer .mdl-layout-title.image-title {
+  padding: 8px;
+  text-align: center;
+}
+
+.mdl-layout__drawer .mdl-layout-title.image-title img {
+  height: 100px;
+}
+
+.mdl-card__supporting-text {
+  box-sizing: border-box;
+  text-align: justify;
+  width: 100%;
+}
+
+.mdl-card__supporting-text > table {
+  width: 100%;
+}
