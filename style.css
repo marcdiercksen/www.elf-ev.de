@@ -6,8 +6,8 @@ p {
   margin-bottom: 0;
 }
 
-p + p {
-  margin-bottom: 16px;
+p + * {
+  margin-top: 16px;
 }
 
 .mdl-layout__content {
