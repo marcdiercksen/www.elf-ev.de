@@ -22,7 +22,7 @@ p + * {
 }
 
 .card-xl.mdl-card .mdl-card__media img {
-  max-width: 512px;
+  max-width: 100%;
 }
 
 .card-xxl.mdl-card {
