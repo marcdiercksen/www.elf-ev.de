@@ -65,13 +65,13 @@ p + * {
   height: 100px;
 }
 
-.mdl-card__title + .mdl-card__supporting-text {
-  padding-top: 0;
-}
-
 .mdl-card__supporting-text {
   box-sizing: border-box;
   width: 100%;
+}
+
+.mdl-card__title + .mdl-card__supporting-text {
+  padding-top: 0;
 }
 
 .mdl-card__supporting-text > table {
