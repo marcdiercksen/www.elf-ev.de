@@ -6,6 +6,8 @@ python:
 
 install:
 - pip install html5validator
+- npm install --global stylelint stylelint-config-standard
 
 script:
 - html5validator --show-warnings
+- stylelint **.{css,html} --ignore-pattern='*.min.css' --config="$( npm root --global )/stylelint-config-standard/index.js"
