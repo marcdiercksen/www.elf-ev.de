@@ -65,6 +65,10 @@ p + * {
   height: 100px;
 }
 
+.mdl-navigation{
+  flex-grow: 1;
+}
+
 .mdl-card__supporting-text {
   box-sizing: border-box;
   width: 100%;
