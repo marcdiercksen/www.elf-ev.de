@@ -93,3 +93,7 @@ p + * {
 .mdl-card__actions .mdl-button {
   height: inherit;
 }
+
+.canceled {
+  text-decoration: line-through;
+}
