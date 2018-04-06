@@ -36,13 +36,23 @@ window.replaceWithCalendar = function (calendarPlaceholder, calendarData) {
         if (event.canceled) {
           var secondaryContentSpan = document.createElement('span')
           {
+            var canceledId = 'event-' + i + '-canceled'
             secondaryContentSpan.classList.add('mdl-list__item-secondary-content')
             var statusI = document.createElement('i')
             {
               statusI.classList.add('material-icons')
+              statusI.setAttribute('id', canceledId)
               statusI.appendChild(document.createTextNode('error_outline'))
             }
             secondaryContentSpan.appendChild(statusI)
+            var statusTooltip = document.createElement('span')
+            {
+              statusTooltip.classList.add('mdl-tooltip')
+              statusTooltip.classList.add('mdl-tooltip--top')
+              statusTooltip.setAttribute('for', canceledId)
+              statusTooltip.appendChild(document.createTextNode('Fällt aus'))
+            }
+            secondaryContentSpan.appendChild(statusTooltip)
           }
           li.appendChild(secondaryContentSpan)
         }
