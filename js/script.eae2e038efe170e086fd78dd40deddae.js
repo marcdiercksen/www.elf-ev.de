@@ -1,10 +1,27 @@
 window.replaceWithCalendar = function (calendarPlaceholder, calendarData) {
+  var beginFormat = new Intl.DateTimeFormat('de-DE', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: 'Europe/Berlin'
+  })
+  var endFormat = new Intl.DateTimeFormat('de-DE', {
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: 'Europe/Berlin'
+  })
   var ul = document.createElement('ul')
   {
     ul.classList.add('mdl-list')
     var i = 0, n = calendarData.events.length
     while (i < n) {
       var event = calendarData.events[i]
+      event.begin = new Date(event.date)
+      event.end = new Date(event.begin.getTime() + event.duration * 60 * 1000)
+      event.dateString = beginFormat.format(event.begin) + '–' + endFormat.format(event.end) + ' Uhr'
       var li = document.createElement('li')
       {
         li.classList.add('mdl-list__item')
@@ -28,7 +45,7 @@ window.replaceWithCalendar = function (calendarPlaceholder, calendarData) {
           var subtitleSpan = document.createElement('span')
           {
             subtitleSpan.classList.add('mdl-list__item-sub-title')
-            subtitleSpan.appendChild(document.createTextNode(event.date))
+            subtitleSpan.appendChild(document.createTextNode(event.dateString))
           }
           primaryContentSpan.appendChild(subtitleSpan)
         }
